@@ -1,0 +1,12 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#home {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+    url("./IMAGES/homepage-bg-min.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
