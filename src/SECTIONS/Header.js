@@ -24,8 +24,8 @@ const Navbar = () => {
       className="z-10 py-3  fixed left-0 right-0 px-4 text-white
         bg-gray-600 border-b-4 border-yellow-400"
       style={{
-        backgroundColor: `rgba(75, 85, 99, ${navBackground})`,
-        borderBottom: `2px solid rgba(96, 165, 250, ${navBackground})`,
+        backgroundColor: `rgba(40, 40, 40, ${navBackground})`,
+        borderBottom: `2px solid rgba(251, 191, 36, ${navBackground})`,
       }}
     >
       <div className="container mx-auto items-center justify-between flex">

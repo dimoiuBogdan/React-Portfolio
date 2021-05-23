@@ -3,7 +3,14 @@ module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      height: {
+        "60vh": "80vh",
+      },
+      padding: {
+        "3vw": "3vw",
+      },
+    },
   },
   variants: {
     extend: {},

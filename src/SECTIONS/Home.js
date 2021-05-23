@@ -1,23 +1,27 @@
+import heroPNG from "../IMAGES/hero_png.png";
+
 const Home = () => {
   return (
-    <div
-      id="home"
-      className="text-center w-full h-screen flex items-center justify-center flex-col text-white font-semibold"
-    >
-      <h3 className="text-xl">Hello, I'm Bogdan,</h3>
-      <h2 className="sm:text-5xl text-4xl my-2 text-yellow-400">
-        FRONT-END DEVELOPER
-      </h2>
-      <h4 className="sm:text-lg text-md">
-        Passionate, Hard Working, Always Learning
-      </h4>
-      <div>
-        <button className="text-lg px-4 mt-5 py-0.5 transition-all hover:border-transparent mx-2 border-2 border-yellow-400 rounded-full">
-          Download CV
-        </button>
-        <button className="text-lg px-4 mt-5 py-0.5 transition-all hover:border-transparent mx-2 border-2 border-yellow-400 rounded-full">
-          My Skills
-        </button>
+    <div id="home">
+      <div className="container lg:px-3vw text-center mx-auto w-full h-60vh flex items-center justify-evenly text-white font-medium">
+        <div className="w-full">
+          <h3 className="text-2xl lg:text-3xl">Hello, I'm Bogdan,</h3>
+          <h2 className="sm:text-4xl lg:text-5xl text-4xl my-3 text-yellow-400">
+            FRONT-END DEV.
+          </h2>
+          <h4 className="sm:text-xl lg:text-2xl text-lg">
+            Passionate, Hard Working, Always Learning
+          </h4>
+          <div>
+            <button className="font-medium text-lg md:text-xl px-5 mt-7 py-0.5 transition-all hover:border-transparent mx-2 border-2 border-yellow-400 rounded-full">
+              Download CV
+            </button>
+            <button className="font-medium text-lg md:text-xl px-5 mt-7 py-0.5 transition-all hover:border-transparent mx-2 border-2 border-yellow-400 rounded-full">
+              My Skills
+            </button>
+          </div>
+        </div>
+        <img className="md:w-1/2 sm:w-2/5 w-0" src={heroPNG} alt="hero-png" />
       </div>
     </div>
   );
