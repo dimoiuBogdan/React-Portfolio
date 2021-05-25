@@ -1,9 +1,10 @@
+import HomeScroll from "../COMPONENTS/HomeScroll";
 import heroPNG from "../IMAGES/hero_png.png";
 
 const Home = () => {
   return (
-    <div id="home">
-      <div className="container lg:px-3vw text-center mx-auto w-full h-60vh flex items-center justify-evenly text-white font-medium">
+    <div id="home-section">
+      <div className="container lg:px-3vw text-center mx-auto w-full min-h-screen flex items-center justify-evenly text-white font-medium">
         <div className="w-full">
           <h3 className="text-2xl lg:text-3xl" data-aos="fade-right">
             Hello, I'm Bogdan,
@@ -23,12 +24,8 @@ const Home = () => {
             Passionate, Hard Working, Always Learning
           </h4>
           <div data-aos="fade-right" data-aos-delay="1000">
-            <button className="font-medium text-lg md:text-xl px-5 mt-7 py-0.5 transition-all hover:border-transparent mx-2 border-2 border-yellow-400 rounded-full">
-              Download CV
-            </button>
-            <button className="font-medium text-lg md:text-xl px-5 mt-7 py-0.5 transition-all hover:border-transparent mx-2 border-2 border-yellow-400 rounded-full">
-              My Skills
-            </button>
+            <button className="button">Download CV</button>
+            <button className="button">My Skills</button>
           </div>
         </div>
         <img
@@ -39,6 +36,7 @@ const Home = () => {
           alt="hero-png"
         />
       </div>
+      <HomeScroll />
     </div>
   );
 };
