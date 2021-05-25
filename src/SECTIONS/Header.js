@@ -53,21 +53,36 @@ const Navbar = () => {
           flex-col flex transition-all duration-1000 fixed top-0 h-full w-1/3 min-w-30rem border-r-2 border-yellow-400 left-0 bg-black bg-opacity-70 justify-evenly text-xl items-center
           ${isVisible ? "left-0" : "-left-96 lg:left-0"}`}
           >
-            <h2 className="mx-4 flex items-center cursor-pointer transition-all hover:text-yellow-400 transform hover:scale-105">
+            <a
+              href="#home-section"
+              className="mx-4 flex items-center cursor-pointer transition-all hover:text-yellow-400 transform hover:scale-105"
+            >
               Home
-            </h2>
-            <h2 className="mx-4 flex items-center cursor-pointer transition-all hover:text-yellow-400 transform hover:scale-105">
+            </a>
+            <a
+              href="#about-section"
+              className="mx-4 flex items-center cursor-pointer transition-all hover:text-yellow-400 transform hover:scale-105"
+            >
               About
-            </h2>
-            <h2 className="mx-4 flex items-center cursor-pointer transition-all hover:text-yellow-400 transform hover:scale-105">
+            </a>
+            <a
+              href="#skills-section"
+              className="mx-4 flex items-center cursor-pointer transition-all hover:text-yellow-400 transform hover:scale-105"
+            >
               Skills
-            </h2>
-            <h2 className="mx-4 flex items-center cursor-pointer transition-all hover:text-yellow-400 transform hover:scale-105">
+            </a>
+            <a
+              href="#portfolio-section"
+              className="mx-4 flex items-center cursor-pointer transition-all hover:text-yellow-400 transform hover:scale-105"
+            >
               Portfolio
-            </h2>
-            <h2 className="mx-4 flex items-center cursor-pointer transition-all hover:text-yellow-400 transform hover:scale-105">
+            </a>
+            <a
+              href="#contact-section"
+              className="mx-4 flex items-center cursor-pointer transition-all hover:text-yellow-400 transform hover:scale-105"
+            >
               Contact
-            </h2>
+            </a>
           </div>
         </div>
       </div>
