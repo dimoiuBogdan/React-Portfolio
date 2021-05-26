@@ -9,6 +9,7 @@ const About = () => {
       <div className="container min-h-50vh w-full py-24 mx-auto flex items-center justify-evenly">
         <div
           id="about-image"
+          data-aos="fade-in"
           className="hidden text-center h-96 w-full max-w-sm border-2 lg:flex border-yellow-400 text-yellow-400 rounded-xl shadow-lg hover:shadow-xl justify-evenly items-end p-4"
         >
           <a
@@ -16,6 +17,8 @@ const About = () => {
             href="https://github.com/dimoiuBogdan?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
+            data-aos="fade-up"
+            data-aos-delay="600"
           >
             <GitHubIcon fontSize="large" />
           </a>
@@ -24,6 +27,8 @@ const About = () => {
             href="https://www.instagram.com/bogdan_dimoiu/"
             target="_blank"
             rel="noopener noreferrer"
+            data-aos="fade-up"
+            data-aos-delay="700"
           >
             <InstagramIcon fontSize="large" />
           </a>
@@ -32,6 +37,8 @@ const About = () => {
             href="tel:+40727892022"
             target="_blank"
             rel="noopener noreferrer"
+            data-aos="fade-up"
+            data-aos-delay="850"
           >
             <PhoneIcon fontSize="large" />
           </a>
@@ -40,11 +47,16 @@ const About = () => {
             href="mailto:bogdybogdan34@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
+            data-aos="fade-up"
+            data-aos-delay="1000"
           >
             <MailIcon fontSize="large" />
           </a>
         </div>
-        <div className="text-justify text-gray-300 leading-7 lg:w-1/2 w-full text-lg px-6">
+        <div
+          data-aos="fade-down-left"
+          className="text-justify text-gray-300 leading-7 lg:w-1/2 w-full text-lg px-6"
+        >
           <h2 className="text-yellow-400 font-medium text-4xl">About Me</h2>
           <p className="my-6">
             Hello! My name is Dimoiu Bogdan and I live in Romania, Sibiu. I

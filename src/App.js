@@ -15,8 +15,7 @@ const Footer = React.lazy(() => import("./SECTIONS/Footer"));
 const App = () => {
   useEffect(() => {
     AOS.init({
-      mirror: true,
-      duration: 800,
+      duration: 600,
     });
   }, []);
 
