@@ -14,6 +14,9 @@ module.exports = {
       padding: {
         "3vw": "3vw",
       },
+      screens: {
+        xs: "400px",
+      },
     },
   },
   variants: {

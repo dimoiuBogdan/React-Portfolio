@@ -27,13 +27,13 @@ html {
 }
 
 .title {
-  @apply text-yellow-400 font-medium text-4xl;
+  @apply text-yellow-400 font-medium sm:text-4xl text-3xl;
 }
 
 .skill-card-wrap {
-  @apply p-5 w-1/3;
+  @apply sm:p-5 p-3 sm:w-1/3 w-1/2;
 }
 
 .skill-card {
-  @apply shadow-xl text-xl font-medium rounded-sm bg-black bg-opacity-20 p-5 flex items-center justify-between;
+  @apply shadow-xl sm:text-xl font-medium rounded-sm bg-black bg-opacity-20 md:px-5 px-2 md:py-3 py-1 flex items-center justify-between;
 }

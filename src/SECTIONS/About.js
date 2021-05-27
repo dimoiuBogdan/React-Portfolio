@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div id="about-section">
-      <div className="container min-h-50vh w-full py-24 mx-auto flex items-center justify-evenly">
+      <div className="container min-h-50vh w-full py-20 mx-auto flex items-center justify-evenly">
         <div
           id="about-image"
           data-aos="fade-in"
@@ -16,7 +16,7 @@ const About = () => {
             data-aos-delay="200"
             data-aos-anchor="top-center"
           >
-            <i class="fab fa-github text-3xl"></i>
+            <i className="fab fa-github text-3xl"></i>
           </a>
           <a
             className="hover:text-yellow-500 transition-all transform hover:scale-110"
@@ -27,7 +27,7 @@ const About = () => {
             data-aos-delay="300"
             data-aos-anchor="top-center"
           >
-            <i class="fab fa-instagram text-3xl"></i>
+            <i className="fab fa-instagram text-3xl"></i>
           </a>
           <a
             className="hover:text-yellow-500 transition-all transform hover:scale-110"
@@ -38,7 +38,7 @@ const About = () => {
             data-aos-delay="450"
             data-aos-anchor="top-center"
           >
-            <i class="fas fa-phone text-3xl"></i>
+            <i className="fas fa-phone text-3xl"></i>
           </a>
           <a
             className="hover:text-yellow-500 transition-all transform hover:scale-110"
@@ -49,7 +49,7 @@ const About = () => {
             data-aos-delay="600"
             data-aos-anchor="top-center"
           >
-            <i class="fas fa-envelope text-3xl"></i>
+            <i className="fas fa-envelope text-3xl"></i>
           </a>
         </div>
         <div
@@ -69,7 +69,7 @@ const About = () => {
             an easy, rich, popular and enjoyable programming language and did
             not regret it ever since.
           </p>
-          <div className="flex items-center justify-center lg:justify-start">
+          <div className="flex items-center justify-start">
             <button className="button w-32">Skills</button>
             <button className="button w-32">Portfolio</button>
           </div>
