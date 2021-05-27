@@ -14,7 +14,6 @@ const About = () => {
             rel="noopener noreferrer"
             data-aos="fade-up"
             data-aos-delay="200"
-            data-aos-anchor="top-center"
           >
             <i className="fab fa-github text-3xl"></i>
           </a>
@@ -25,7 +24,6 @@ const About = () => {
             rel="noopener noreferrer"
             data-aos="fade-up"
             data-aos-delay="300"
-            data-aos-anchor="top-center"
           >
             <i className="fab fa-instagram text-3xl"></i>
           </a>
@@ -36,7 +34,6 @@ const About = () => {
             rel="noopener noreferrer"
             data-aos="fade-up"
             data-aos-delay="450"
-            data-aos-anchor="top-center"
           >
             <i className="fas fa-phone text-3xl"></i>
           </a>
@@ -47,7 +44,6 @@ const About = () => {
             rel="noopener noreferrer"
             data-aos="fade-up"
             data-aos-delay="600"
-            data-aos-anchor="top-center"
           >
             <i className="fas fa-envelope text-3xl"></i>
           </a>
