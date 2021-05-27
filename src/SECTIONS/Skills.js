@@ -39,6 +39,24 @@ const Skills = () => {
             <i className="fab fa-git-alt text-3xl text-yellow-400"></i>
           </div>
         </div>
+        <div className="skill-card-wrap">
+          <div className="skill-card">
+            <h2>WORDPRESS</h2>
+            <i className="fab fa-wordpress text-3xl text-yellow-400"></i>
+          </div>
+        </div>
+        <div className="skill-card-wrap">
+          <div className="skill-card">
+            <h2>FIGMA</h2>
+            <i className="fab fa-figma text-3xl text-yellow-400"></i>
+          </div>
+        </div>
+        <div className="skill-card-wrap">
+          <div className="skill-card">
+            <h2>NOTION</h2>
+            <i className="fas fa-tasks text-3xl text-yellow-400"></i>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div id="about-section">
-      <div className="container min-h-50vh w-full py-20 mx-auto flex items-center justify-evenly">
+      <div className="container min-h-50vh w-full lg:py-20 py-14 mx-auto flex items-center justify-evenly">
         <div
           id="about-image"
           data-aos="fade-in"
