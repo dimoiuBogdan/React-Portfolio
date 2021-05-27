@@ -1,9 +1,6 @@
 // React imports.
-import React, { Suspense, useEffect } from "react";
-// Animation on scroll input
-import AOS from "aos";
-import "aos/dist/aos.css";
-// Sections lazy imports.
+import React, { Suspense } from "react";
+
 const Header = React.lazy(() => import("./SECTIONS/Header"));
 const Home = React.lazy(() => import("./SECTIONS/Home"));
 const About = React.lazy(() => import("./SECTIONS/About"));
@@ -13,22 +10,24 @@ const Contact = React.lazy(() => import("./SECTIONS/Contact"));
 const Footer = React.lazy(() => import("./SECTIONS/Footer"));
 
 const App = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 600,
-    });
-  }, []);
-
   return (
-    <div>
-      <Suspense fallback={<h2>Loading...</h2>}>
+    <div className="bg-black bg-opacity-80 text-gray-300 leading-7">
+      <Suspense
+        fallback={
+          <div className="flex items-center justify-center h-screen w-full bg-black bg-opacity-80 text-yellow-400 font-bold text-4xl">
+            Loading...
+          </div>
+        }
+      >
         <Header />
         <Home />
-        <About />
-        <Skills />
-        <Portfolio />
-        <Contact />
-        <Footer />
+        <div className="container mx-auto">
+          <About />
+          <Skills />
+          <Portfolio />
+          <Contact />
+          <Footer />
+        </div>
       </Suspense>
     </div>
   );

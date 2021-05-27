@@ -1,11 +1,6 @@
-import GitHubIcon from "@material-ui/icons/GitHub";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import PhoneIcon from "@material-ui/icons/Phone";
-import MailIcon from "@material-ui/icons/Mail";
-
 const About = () => {
   return (
-    <div id="about-section" className="bg-black bg-opacity-80">
+    <div id="about-section">
       <div className="container min-h-50vh w-full py-24 mx-auto flex items-center justify-evenly">
         <div
           id="about-image"
@@ -18,9 +13,10 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
             data-aos="fade-up"
-            data-aos-delay="600"
+            data-aos-delay="200"
+            data-aos-anchor="top-center"
           >
-            <GitHubIcon fontSize="large" />
+            <i class="fab fa-github text-3xl"></i>
           </a>
           <a
             className="hover:text-yellow-500 transition-all transform hover:scale-110"
@@ -28,9 +24,10 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
             data-aos="fade-up"
-            data-aos-delay="700"
+            data-aos-delay="300"
+            data-aos-anchor="top-center"
           >
-            <InstagramIcon fontSize="large" />
+            <i class="fab fa-instagram text-3xl"></i>
           </a>
           <a
             className="hover:text-yellow-500 transition-all transform hover:scale-110"
@@ -38,9 +35,10 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
             data-aos="fade-up"
-            data-aos-delay="850"
+            data-aos-delay="450"
+            data-aos-anchor="top-center"
           >
-            <PhoneIcon fontSize="large" />
+            <i class="fas fa-phone text-3xl"></i>
           </a>
           <a
             className="hover:text-yellow-500 transition-all transform hover:scale-110"
@@ -48,16 +46,17 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
             data-aos="fade-up"
-            data-aos-delay="1000"
+            data-aos-delay="600"
+            data-aos-anchor="top-center"
           >
-            <MailIcon fontSize="large" />
+            <i class="fas fa-envelope text-3xl"></i>
           </a>
         </div>
         <div
           data-aos="fade-down-left"
-          className="text-justify text-gray-300 leading-7 lg:w-1/2 w-full text-lg px-6"
+          className="text-justify text-gray-300 lg:w-1/2 w-full text-lg px-6"
         >
-          <h2 className="text-yellow-400 font-medium text-4xl">About Me</h2>
+          <h2 className="title">About Me</h2>
           <p className="my-6">
             Hello! My name is Dimoiu Bogdan and I live in Romania, Sibiu. I
             consider myself a positive, happy person that you can easily talk
