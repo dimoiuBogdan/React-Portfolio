@@ -1,4 +1,27 @@
 const About = () => {
+  const links = [
+    {
+      href: "https://github.com/dimoiuBogdan?tab=repositories",
+      aosDelay: 200,
+      iconClass: "fab fa-github",
+    },
+    {
+      href: "https://www.instagram.com/bogdan_dimoiu/",
+      aosDelay: 300,
+      iconClass: "fab fa-instagram",
+    },
+    {
+      href: "tel:+40727892022",
+      aosDelay: 400,
+      iconClass: "fas fa-phone",
+    },
+    {
+      href: "mailto:bogdybogdan34@gmail.com",
+      aosDelay: 500,
+      iconClass: "fas fa-envelope",
+    },
+  ];
+
   return (
     <div id="about-section">
       <div className="container min-h-50vh w-full lg:py-20 py-14 mx-auto flex items-center justify-evenly">
@@ -7,46 +30,19 @@ const About = () => {
           data-aos="fade-in"
           className="hidden text-center h-96 w-full max-w-sm border-2 lg:flex border-yellow-400 text-yellow-400 rounded-xl shadow-lg hover:shadow-xl justify-evenly items-end p-4"
         >
-          <a
-            className="hover:text-yellow-500 transition-all transform hover:scale-110"
-            href="https://github.com/dimoiuBogdan?tab=repositories"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <i className="fab fa-github text-3xl"></i>
-          </a>
-          <a
-            className="hover:text-yellow-500 transition-all transform hover:scale-110"
-            href="https://www.instagram.com/bogdan_dimoiu/"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <i className="fab fa-instagram text-3xl"></i>
-          </a>
-          <a
-            className="hover:text-yellow-500 transition-all transform hover:scale-110"
-            href="tel:+40727892022"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-aos="fade-up"
-            data-aos-delay="450"
-          >
-            <i className="fas fa-phone text-3xl"></i>
-          </a>
-          <a
-            className="hover:text-yellow-500 transition-all transform hover:scale-110"
-            href="mailto:bogdybogdan34@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
-            <i className="fas fa-envelope text-3xl"></i>
-          </a>
+          {links.map((link) => (
+            <a
+              key={link.href}
+              className="hover:text-yellow-500 transition-all transform hover:scale-110"
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-aos="fade-up"
+              data-aos-delay={link.aosDelay}
+            >
+              <i className={`${link.iconClass} text-3xl`}></i>
+            </a>
+          ))}
         </div>
         <div
           data-aos="fade-down-left"

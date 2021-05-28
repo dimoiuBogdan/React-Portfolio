@@ -1,68 +1,53 @@
 const Skills = () => {
+  const skills = [
+    {
+      content: "HTML",
+      aosDelay: 100,
+      iconClass: "fab fa-html5",
+    },
+    {
+      content: "CSS",
+      aosDelay: 200,
+      iconClass: "fab fa-css3-alt",
+    },
+    {
+      content: "JAVASCRIPT",
+      aosDelay: 300,
+      iconClass: "fab fa-js-square",
+    },
+    {
+      content: "REACT",
+      aosDelay: 400,
+      iconClass: "fab fa-react",
+    },
+    {
+      content: "FIREBASE",
+      aosDelay: 500,
+      iconClass: "fas fa-fire",
+    },
+    {
+      content: "GIT",
+      aosDelay: 600,
+      iconClass: "fab fa-git-alt",
+    },
+  ];
   return (
     <div>
       <h2 className="text-center title mb-8">Technologies I Use</h2>
       <div className="flex flex-wrap justify-evenly items-center">
-        <div
-          className="skill-card-wrap"
-          data-aos="fade-in"
-          data-aos-delay="100"
-        >
-          <div className="skill-card">
-            <h2>HTML</h2>
-            <i className="fab fa-html5 text-3xl text-yellow-400"></i>
+        {skills.map((skill) => (
+          <div
+            key={skill.content}
+            className="skill-card-wrap"
+            data-aos="fade-in"
+            data-aos-delay={skill.aosDelay}
+          >
+            <div className="skill-card">
+              <h2>{skill.content}</h2>
+              <i className={`${skill.iconClass} text-3xl text-yellow-400`}></i>
+            </div>
           </div>
-        </div>
-        <div
-          className="skill-card-wrap"
-          data-aos="fade-in"
-          data-aos-delay="200"
-        >
-          <div className="skill-card">
-            <h2>CSS</h2>
-            <i className="fab fa-css3-alt text-3xl text-yellow-400"></i>
-          </div>
-        </div>
-        <div
-          className="skill-card-wrap"
-          data-aos="fade-in"
-          data-aos-delay="300"
-        >
-          <div className="skill-card">
-            <h2>JAVASCRIPT</h2>
-            <i className="fab fa-js-square text-3xl text-yellow-400"></i>
-          </div>
-        </div>
-        <div
-          className="skill-card-wrap"
-          data-aos="fade-in"
-          data-aos-delay="400"
-        >
-          <div className="skill-card">
-            <h2>REACT</h2>
-            <i className="fab fa-react text-3xl text-yellow-400"></i>
-          </div>
-        </div>
-        <div
-          className="skill-card-wrap"
-          data-aos="fade-in"
-          data-aos-delay="500"
-        >
-          <div className="skill-card">
-            <h2>FIREBASE</h2>
-            <i className="fas fa-fire text-3xl text-yellow-400"></i>
-          </div>
-        </div>
-        <div
-          className="skill-card-wrap"
-          data-aos="fade-in"
-          data-aos-delay="600"
-        >
-          <div className="skill-card">
-            <h2>GIT</h2>
-            <i className="fab fa-git-alt text-3xl text-yellow-400"></i>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
