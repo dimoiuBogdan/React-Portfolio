@@ -7,6 +7,22 @@ html {
   scroll-behavior: smooth;
 }
 
+#app {
+  overflow-x: hidden;
+}
+
+#social-line::before {
+  content: "";
+  height: 100%;
+  width: 1px;
+  background: rgba(251, 191, 36, 0.5);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 #home-section {
   background: linear-gradient(rgba(49, 41, 0, 0.7), rgba(26, 21, 0, 0.7)),
     url("./IMAGES/homepage-bg-min.jpg");

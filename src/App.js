@@ -11,7 +11,7 @@ const Footer = React.lazy(() => import("./SECTIONS/Footer"));
 
 const App = () => {
   return (
-    <div className="bg-black bg-opacity-80 text-gray-300 leading-7">
+    <div id="app" className="bg-black bg-opacity-80 text-gray-300 leading-7">
       <Suspense
         fallback={
           <div className="flex items-center justify-center h-screen w-full bg-black bg-opacity-80 text-yellow-400 font-bold text-4xl">

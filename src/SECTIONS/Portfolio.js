@@ -1,7 +1,8 @@
 const Portfolio = () => {
   const projects = [
     {
-      title: "",
+      title: "iBlog",
+      description: "",
       builtWith: "",
       features: "",
       img: "",
@@ -16,6 +17,7 @@ const Portfolio = () => {
             <div>
               <h3>iBlog</h3>
               <p>Blog platform built using :</p>
+              <p>A blog platform</p>
               <p>Features : </p>
             </div>
             <img src="" alt="" />
