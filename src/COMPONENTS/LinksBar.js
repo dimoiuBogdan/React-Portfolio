@@ -24,9 +24,15 @@ const LinksBar = () => {
 
   return (
     <div className="relative">
-      <div id="social-line" className="absolute bottom-0 left-6 flex flex-col">
+      <div
+        data-aos="fade-in"
+        data-aos-delay="1000"
+        id="social-line"
+        className="absolute bottom-0 left-6 flex flex-col"
+      >
         {links.map((link) => (
           <a
+            key={link.iconClass}
             href={link.href}
             data-aos-delay={link.aosDelay}
             data-aos-anchor-placement="top center"
