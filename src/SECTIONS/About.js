@@ -46,7 +46,7 @@ const About = () => {
         </div>
         <div
           data-aos="fade-down-left"
-          className="text-justify text-gray-300 lg:w-1/2 w-full text-lg px-6"
+          className="text-justify text-gray-300 lg:w-1/2 w-full text-lg sm:px-6"
         >
           <h2 className="title">About Me</h2>
           <p className="my-6">

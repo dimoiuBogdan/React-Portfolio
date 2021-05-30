@@ -86,7 +86,7 @@ const Portfolio = () => {
             data-aos="fade-in"
             data-aos-delay={i * 200}
             key={project.url}
-            className="w-1/4 h-80 p-4"
+            className="lg:w-1/4 md:w-1/3 sm:w-1/2 w-full h-72 md:h-80 p-4"
           >
             <div
               className={`cursor-default overflow-hidden shadow-md h-full text-gray-300 bg-black bg-opacity-20 flex justify-between rounded-md ${
@@ -103,16 +103,16 @@ const Portfolio = () => {
                   initial={project.showCover ? "visible" : "hidden"}
                   className="w-full"
                 >
-                  <div className="flex items-center w-full justify-between">
-                    <h3 className="text-2xl text-center font-medium mb-2 text-yellow-400">
+                  <div className="flex w-full justify-between">
+                    <h3 className="text-2xl md:text-xl xl:text-2xl text-center font-medium mb-2 text-yellow-400">
                       {project.title}
                     </h3>
                     <div>
                       <a target="_blank" rel="noreferrer" href={project.github}>
-                        <i className="text-xl text-yellow-400 transition-all hover:scale-110 hover:text-yellow-500 transform fas fa-eye"></i>
+                        <i className="text-2xl text-yellow-400 transition-all hover:scale-110 hover:text-yellow-500 transform fas fa-eye"></i>
                       </a>
                       <a target="_blank" rel="noreferrer" href={project.url}>
-                        <i className="text-xl ml-3 text-yellow-400 transition-all hover:scale-110 hover:text-yellow-500 transform fab fa-github"></i>
+                        <i className="text-2xl ml-3 text-yellow-400 transition-all hover:scale-110 hover:text-yellow-500 transform fab fa-github"></i>
                       </a>
                     </div>
                   </div>
@@ -124,7 +124,7 @@ const Portfolio = () => {
                     <span className="font-medium">Built with:</span>{" "}
                     {project.builtWith}
                   </p>
-                  <p>
+                  <p className="block md:hidden xl:block">
                     <span className="font-medium">Main features:</span>{" "}
                     {project.features}
                   </p>
