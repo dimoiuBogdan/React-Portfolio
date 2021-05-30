@@ -5,6 +5,31 @@ import { useEffect, useState } from "react";
 const Navbar = () => {
   const { ref, isVisible, setIsVisible } = useClickOutside(false);
   const [navBackground, setNavBackground] = useState(0);
+<<<<<<< HEAD
+=======
+  const sections = [
+    {
+      content: "Home",
+      href: "#home-section",
+    },
+    {
+      content: "About",
+      href: "#about-section",
+    },
+    {
+      content: "Skills",
+      href: "#skills-section",
+    },
+    {
+      content: "Portfolio",
+      href: "#portfolio-section",
+    },
+    {
+      content: "Contact",
+      href: "#contact-section",
+    },
+  ];
+>>>>>>> 3f9ee9c68dac0c10ccf1e6d0e342edfa2e0b5216
 
   // Set nav background opacity as you scroll
   const scrollFunction = () => {
@@ -50,6 +75,7 @@ const Navbar = () => {
           </div>
           <div
             className={`lg:border-0 lg:flex-row lg:bg-opacity-0 lg:relative lg:w-auto
+<<<<<<< HEAD
           flex-col flex transition-all duration-1000 fixed top-0 h-full w-1/3 min-w-30rem border-r-2 border-yellow-400 left-0 bg-black bg-opacity-70 justify-evenly text-xl items-center
           ${isVisible ? "left-0" : "-left-96 lg:left-0"}`}
           >
@@ -83,6 +109,21 @@ const Navbar = () => {
             >
               Contact
             </a>
+=======
+          flex-col flex transition-all duration-1000 fixed top-0 h-full w-1/3 min-w-30rem border-r-2 border-yellow-400 left-0 bg-black bg-opacity-70 justify-evenly text-lg items-center
+          ${isVisible ? "left-0" : "-left-96 lg:left-0"}`}
+          >
+            {sections.map((section, index) => (
+              <a
+                key={section.content}
+                href={section.href}
+                className="mx-3 flex items-center cursor-pointer transition-all hover:text-yellow-400 transform hover:scale-105"
+              >
+                <span className="mr-1 text-yellow-400">0{index + 1}.</span>
+                {section.content}
+              </a>
+            ))}
+>>>>>>> 3f9ee9c68dac0c10ccf1e6d0e342edfa2e0b5216
           </div>
         </div>
       </div>
