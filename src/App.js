@@ -1,6 +1,7 @@
 // React imports.
-import React, { Suspense } from "react";
-
+import React, { Suspense, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Header = React.lazy(() => import("./SECTIONS/Header"));
 const Home = React.lazy(() => import("./SECTIONS/Home"));
 const About = React.lazy(() => import("./SECTIONS/About"));
@@ -10,6 +11,14 @@ const Contact = React.lazy(() => import("./SECTIONS/Contact"));
 const Footer = React.lazy(() => import("./SECTIONS/Footer"));
 
 const App = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 600,
+      mirror: true,
+      anchorPlacement: "top-center",
+    });
+  }, []);
+
   return (
     <div id="app" className="bg-black bg-opacity-80 text-gray-300 leading-7">
       <Suspense

@@ -5,8 +5,6 @@ import { useEffect, useState } from "react";
 const Navbar = () => {
   const { ref, isVisible, setIsVisible } = useClickOutside(false);
   const [navBackground, setNavBackground] = useState(0);
-<<<<<<< HEAD
-=======
   const sections = [
     {
       content: "Home",
@@ -29,7 +27,6 @@ const Navbar = () => {
       href: "#contact-section",
     },
   ];
->>>>>>> 3f9ee9c68dac0c10ccf1e6d0e342edfa2e0b5216
 
   // Set nav background opacity as you scroll
   const scrollFunction = () => {
@@ -53,7 +50,7 @@ const Navbar = () => {
         borderBottom: `2px solid rgba(251, 191, 36, ${navBackground})`,
       }}
     >
-      <div className="container mx-auto items-center justify-between flex">
+      <div className="container mx-auto items-center justify-between font-medium flex">
         <img src="" alt="" />
         <div>
           <div
@@ -75,41 +72,6 @@ const Navbar = () => {
           </div>
           <div
             className={`lg:border-0 lg:flex-row lg:bg-opacity-0 lg:relative lg:w-auto
-<<<<<<< HEAD
-          flex-col flex transition-all duration-1000 fixed top-0 h-full w-1/3 min-w-30rem border-r-2 border-yellow-400 left-0 bg-black bg-opacity-70 justify-evenly text-xl items-center
-          ${isVisible ? "left-0" : "-left-96 lg:left-0"}`}
-          >
-            <a
-              href="#home-section"
-              className="mx-4 flex items-center cursor-pointer transition-all hover:text-yellow-400 transform hover:scale-105"
-            >
-              Home
-            </a>
-            <a
-              href="#about-section"
-              className="mx-4 flex items-center cursor-pointer transition-all hover:text-yellow-400 transform hover:scale-105"
-            >
-              About
-            </a>
-            <a
-              href="#skills-section"
-              className="mx-4 flex items-center cursor-pointer transition-all hover:text-yellow-400 transform hover:scale-105"
-            >
-              Skills
-            </a>
-            <a
-              href="#portfolio-section"
-              className="mx-4 flex items-center cursor-pointer transition-all hover:text-yellow-400 transform hover:scale-105"
-            >
-              Portfolio
-            </a>
-            <a
-              href="#contact-section"
-              className="mx-4 flex items-center cursor-pointer transition-all hover:text-yellow-400 transform hover:scale-105"
-            >
-              Contact
-            </a>
-=======
           flex-col flex transition-all duration-1000 fixed top-0 h-full w-1/3 min-w-30rem border-r-2 border-yellow-400 left-0 bg-black bg-opacity-70 justify-evenly text-lg items-center
           ${isVisible ? "left-0" : "-left-96 lg:left-0"}`}
           >
@@ -123,7 +85,6 @@ const Navbar = () => {
                 {section.content}
               </a>
             ))}
->>>>>>> 3f9ee9c68dac0c10ccf1e6d0e342edfa2e0b5216
           </div>
         </div>
       </div>

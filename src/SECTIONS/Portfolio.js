@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
   const [projects, setProjects] = useState([
@@ -36,45 +37,25 @@ const Portfolio = () => {
     },
     {
       title: "Cat Project",
-      description: "",
-      builtWith: "React, Tailwind, HighlightJS, Firebase, MaterialUI",
-      features: "Posting, Reading, Sorting, Authenticating",
+      description:
+        "A project built using Cat-API with navigation, pagination, favorite, 'cause who does not like cute cats, right? ",
+      builtWith: "React, Tailwind, Axios",
+      features: "Fetch, Favorite, Pagination",
       img: "https://developers.redhat.com/blog/wp-content/uploads/2020/04/React-logo.png",
-      github: "https://github.com/dimoiuBogdan/React-iBlog",
-      url: "https://react-iblog.netlify.app/",
+      github: "https://github.com/dimoiuBogdan/React-Cat-Api-Project",
+      url: "https://react-cat-api-bogdan.netlify.app/",
       showCover: true,
     },
     {
-      title: "iBlog",
+      title: "Transactions Tracker",
       description:
-        "This is a basic blog platform. Also, this is my first medium size project I built.",
-      builtWith: "React, Tailwind, HighlightJS, Firebase, MaterialUI",
-      features: "Posting, Reading, Sorting, Authenticating",
+        "A simple expense tracker I built because I really liked the design and the idea of having a visual money management app",
+      builtWith: "React, Tailwind",
+      features: "Add / Remove Transactions",
       img: "https://developers.redhat.com/blog/wp-content/uploads/2020/04/React-logo.png",
-      github: "https://github.com/dimoiuBogdan/React-iBlog",
-      url: "https://react-iblog.netlify.app/",
-      showCover: true,
-    },
-    {
-      title: "iBlog",
-      description:
-        "This is a basic blog platform. Also, this is my first medium size project I built.",
-      builtWith: "React, Tailwind, HighlightJS, Firebase, MaterialUI",
-      features: "Posting, Reading, Sorting, Authenticating",
-      img: "https://developers.redhat.com/blog/wp-content/uploads/2020/04/React-logo.png",
-      github: "https://github.com/dimoiuBogdan/React-iBlog",
-      url: "https://react-iblog.netlify.app/",
-      showCover: true,
-    },
-    {
-      title: "iBlog",
-      description:
-        "This is a basic blog platform. Also, this is my first medium size project I built.",
-      builtWith: "React, Tailwind, HighlightJS, Firebase, MaterialUI",
-      features: "Posting, Reading, Sorting, Authenticating",
-      img: "https://developers.redhat.com/blog/wp-content/uploads/2020/04/React-logo.png",
-      github: "https://github.com/dimoiuBogdan/React-iBlog",
-      url: "https://react-iblog.netlify.app/",
+      github:
+        "https://github.com/dimoiuBogdan/React-Tailwind-Budget-Calculator",
+      url: "https://react-tailwind-budget-calculator.netlify.app/",
       showCover: true,
     },
   ]);
@@ -83,31 +64,46 @@ const Portfolio = () => {
     const hoveredProject = projects.filter((project) => project.url === url);
     setProjects(
       projects.map((project) => {
-        hoveredProject[0].showCover = !hoveredProject[0].showCover;
+        project === hoveredProject[0]
+          ? (project.showCover = !project.showCover)
+          : (project.showCover = true);
         return project;
       })
     );
+  };
+
+  const backdrop = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
   };
 
   return (
     <div className="lg:py-20 py-14">
       <h2 className="title text-center mb-8">My Projects</h2>
       <div className="flex items-center flex-wrap">
-        {projects.map((project) => (
-          <div key={project.title} className="w-1/3 h-64 p-4">
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noreferrer"
-              className={`cursor-pointer shadow-md h-full text-gray-300 bg-black bg-opacity-20 flex justify-between rounded-md ${
+        {projects.map((project, i) => (
+          <div
+            data-aos="fade-in"
+            data-aos-delay={i * 200}
+            key={project.url}
+            className="w-1/4 h-80 p-4"
+          >
+            <div
+              className={`cursor-default overflow-hidden shadow-md h-full text-gray-300 bg-black bg-opacity-20 flex justify-between rounded-md ${
                 project.showCover ? "" : "px-4 py-2"
               }`}
               onMouseEnter={() => flipCover(project.url)}
               onMouseLeave={() => flipCover(project.url)}
             >
               {!project.showCover ? (
-                <div>
-                  <div className="flex items-center justify-between">
+                <motion.div
+                  variants={backdrop}
+                  transition={{ duration: 0.3 }}
+                  animate={project.showCover ? "hidden" : "visible"}
+                  initial={project.showCover ? "visible" : "hidden"}
+                  className="w-full"
+                >
+                  <div className="flex items-center w-full justify-between">
                     <h3 className="text-2xl text-center font-medium mb-2 text-yellow-400">
                       {project.title}
                     </h3>
@@ -121,26 +117,30 @@ const Portfolio = () => {
                     </div>
                   </div>
                   <p>
-                    <span className="font-medium">Built with:</span>{" "}
-                    {project.builtWith}
-                  </p>
-                  <p>
                     <span className="font-medium">Description:</span>{" "}
                     {project.description}
+                  </p>
+                  <p>
+                    <span className="font-medium">Built with:</span>{" "}
+                    {project.builtWith}
                   </p>
                   <p>
                     <span className="font-medium">Main features:</span>{" "}
                     {project.features}
                   </p>
-                </div>
+                </motion.div>
               ) : (
-                <img
+                <motion.img
+                  variants={backdrop}
+                  transition={{ duration: 0.5 }}
+                  animate={project.showCover ? "visible" : "hidden"}
+                  initial={project.showCover ? "hidden" : "visible"}
                   src={project.img}
                   className="h-full w-full object-cover"
                   alt="project-cover"
                 />
               )}
-            </a>
+            </div>
           </div>
         ))}
       </div>
