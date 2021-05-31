@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
+import iBLOG from "../IMAGES/PORTFOLIO/iBLOG.png";
+import simpleChatIMG from "../IMAGES/PORTFOLIO/simpleChatIMG.png";
+import myPortfolioIMG from "../IMAGES/PORTFOLIO/myPortfolioIMG.png";
+import catProjectIMG from "../IMAGES/PORTFOLIO/catProjectIMG.png";
+import transactionsTrackerIMG from "../IMAGES/PORTFOLIO/transactionsTrackerIMG.png";
+
 const Portfolio = () => {
   const [projects, setProjects] = useState([
     {
@@ -9,7 +15,7 @@ const Portfolio = () => {
         "This is a basic blog platform. A project idea that I knew would teach me a lot, and so it did.",
       builtWith: "React, Tailwind, HighlightJS, Firebase, MaterialUI",
       features: "Post, Read, Sort, Authenticate",
-      img: "https://developers.redhat.com/blog/wp-content/uploads/2020/04/React-logo.png",
+      img: iBLOG,
       github: "https://github.com/dimoiuBogdan/React-iBlog",
       url: "https://react-iblog.netlify.app/",
       showCover: true,
@@ -20,7 +26,7 @@ const Portfolio = () => {
         "Simple, real time chat room. An interesting project I built using Firebase",
       builtWith: "React, Tailwind, Firebase",
       features: "Authenticate, Write, Read",
-      img: "https://developers.redhat.com/blog/wp-content/uploads/2020/04/React-logo.png",
+      img: simpleChatIMG,
       github: "https://github.com/dimoiuBogdan/React-Firebase-Tailwind-Chat",
       url: "https://react-chat-firebase.netlify.app/",
       showCover: true,
@@ -30,7 +36,7 @@ const Portfolio = () => {
       description: "The website you are browsing right now.",
       builtWith: "React, Tailwind, AOS",
       features: "Read, Contact",
-      img: "https://developers.redhat.com/blog/wp-content/uploads/2020/04/React-logo.png",
+      img: myPortfolioIMG,
       github: "https://github.com/dimoiuBogdan/React-Portfolio",
       url: "https://dimoiu-bogdan.netlify.app/",
       showCover: true,
@@ -41,7 +47,7 @@ const Portfolio = () => {
         "A project built using Cat-API with navigation, pagination, favorite, 'cause who does not like cute cats, right? ",
       builtWith: "React, Tailwind, Axios",
       features: "Fetch, Favorite, Pagination",
-      img: "https://developers.redhat.com/blog/wp-content/uploads/2020/04/React-logo.png",
+      img: catProjectIMG,
       github: "https://github.com/dimoiuBogdan/React-Cat-Api-Project",
       url: "https://react-cat-api-bogdan.netlify.app/",
       showCover: true,
@@ -52,7 +58,7 @@ const Portfolio = () => {
         "A simple expense tracker I built because I really liked the design and the idea of having a visual money management app",
       builtWith: "React, Tailwind",
       features: "Add / Remove Transactions",
-      img: "https://developers.redhat.com/blog/wp-content/uploads/2020/04/React-logo.png",
+      img: transactionsTrackerIMG,
       github:
         "https://github.com/dimoiuBogdan/React-Tailwind-Budget-Calculator",
       url: "https://react-tailwind-budget-calculator.netlify.app/",
@@ -89,7 +95,7 @@ const Portfolio = () => {
             className="lg:w-1/4 md:w-1/3 sm:w-1/2 w-full h-72 md:h-80 p-4"
           >
             <div
-              className={`cursor-default overflow-hidden shadow-md h-full text-gray-300 bg-black bg-opacity-20 flex justify-between rounded-md ${
+              className={`cursor-default overflow-hidden border-2 border-yellow-500 shadow-md h-full text-gray-300 bg-black bg-opacity-20 flex justify-between rounded-lg ${
                 project.showCover ? "" : "px-4 py-2"
               }`}
               onMouseEnter={() => flipCover(project.url)}
@@ -136,7 +142,7 @@ const Portfolio = () => {
                   animate={project.showCover ? "visible" : "hidden"}
                   initial={project.showCover ? "hidden" : "visible"}
                   src={project.img}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover filter brightness-75"
                   alt="project-cover"
                 />
               )}
