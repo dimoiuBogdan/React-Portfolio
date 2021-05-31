@@ -2,35 +2,35 @@ const About = () => {
   const links = [
     {
       href: "https://github.com/dimoiuBogdan?tab=repositories",
-      aosDelay: 200,
       iconClass: "fab fa-github",
     },
     {
       href: "https://www.instagram.com/bogdan_dimoiu/",
-      aosDelay: 300,
       iconClass: "fab fa-instagram",
     },
     {
       href: "tel:+40727892022",
-      aosDelay: 400,
       iconClass: "fas fa-phone",
     },
     {
       href: "mailto:bogdybogdan34@gmail.com",
-      aosDelay: 500,
       iconClass: "fas fa-envelope",
+    },
+    {
+      href: "https://www.linkedin.com/in/dimoiu-bogdan-650b431ba/",
+      iconClass: "fab fa-linkedin-in",
     },
   ];
 
   return (
     <div id="about-section">
-      <div className="container min-h-50vh w-full lg:py-20 py-14 mx-auto flex items-center justify-evenly">
+      <div className="container min-h-50vh w-full lg:py-32 py-14 mx-auto md:px-0 px-4 flex items-center justify-evenly">
         <div
           id="about-image"
-          data-aos="fade-in"
+          data-aos="fade-up-right"
           className="hidden text-center h-96 w-full max-w-sm border-2 lg:flex border-yellow-400 text-yellow-400 rounded-xl shadow-lg hover:shadow-xl justify-evenly items-end p-4"
         >
-          {links.map((link) => (
+          {links.map((link, i) => (
             <a
               key={link.href}
               className="hover:text-yellow-500 transition-all transform hover:scale-110"
@@ -38,7 +38,7 @@ const About = () => {
               target="_blank"
               rel="noopener noreferrer"
               data-aos="fade-up"
-              data-aos-delay={link.aosDelay}
+              data-aos-delay={i * 100}
             >
               <i className={`${link.iconClass} text-3xl`}></i>
             </a>

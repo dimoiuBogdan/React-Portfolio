@@ -19,7 +19,9 @@ const Home = () => {
           </h4>
           <div>
             <button className="button">Download CV</button>
-            <button className="button">My Skills</button>
+            <button className="button">
+              <a href="#skills-section">My Skills</a>
+            </button>
           </div>
         </div>
         <img

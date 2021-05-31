@@ -84,13 +84,13 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="lg:py-20 py-14">
+    <div id="portfolio-section" className="lg:py-32 py-7">
       <h2 className="title text-center mb-8">My Projects</h2>
       <div className="flex items-center flex-wrap">
         {projects.map((project, i) => (
           <div
             data-aos="fade-in"
-            data-aos-delay={i * 200}
+            data-aos-delay={i * 100}
             key={project.url}
             className="lg:w-1/4 md:w-1/3 sm:w-1/2 w-full h-72 md:h-80 p-4"
           >

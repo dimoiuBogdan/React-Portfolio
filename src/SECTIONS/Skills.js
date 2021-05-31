@@ -9,6 +9,14 @@ const Skills = () => {
       iconClass: "fab fa-css3-alt",
     },
     {
+      content: "TAILWIND",
+      iconClass: "fas fa-pencil-ruler",
+    },
+    {
+      content: "BOOTSTRAP",
+      iconClass: "fab fa-bootstrap",
+    },
+    {
       content: "JAVASCRIPT",
       iconClass: "fab fa-js-square",
     },
@@ -24,9 +32,13 @@ const Skills = () => {
       content: "GIT",
       iconClass: "fab fa-git-alt",
     },
+    {
+      content: "WORDPRESS",
+      iconClass: "fab fa-wordpress",
+    },
   ];
   return (
-    <div>
+    <div className="md:py-14 py-7" id="skills-section">
       <h2 className="text-center title mb-8">Technologies I Use</h2>
       <div className="flex flex-wrap justify-evenly items-center">
         {skills.map((skill, i) => (
@@ -34,7 +46,7 @@ const Skills = () => {
             key={skill.content}
             className="skill-card-wrap"
             data-aos="fade-in"
-            data-aos-delay={i * 300}
+            data-aos-delay={i * 100}
           >
             <div className="skill-card">
               <h2>{skill.content}</h2>

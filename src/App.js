@@ -2,6 +2,7 @@
 import React, { Suspense, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import UpButton from "./COMPONENTS/UpButton";
 const Header = React.lazy(() => import("./SECTIONS/Header"));
 const Home = React.lazy(() => import("./SECTIONS/Home"));
 const About = React.lazy(() => import("./SECTIONS/About"));
@@ -37,6 +38,7 @@ const App = () => {
           <Contact />
           <Footer />
         </div>
+        <UpButton />
       </Suspense>
     </div>
   );
