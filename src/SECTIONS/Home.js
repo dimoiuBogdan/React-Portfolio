@@ -2,7 +2,7 @@ import HomeScroll from "../COMPONENTS/HomeScroll";
 import LinksBar from "../COMPONENTS/LinksBar";
 import heroPNG from "../IMAGES/hero_png.png";
 
-const Home = () => {
+const Home = ({ links }) => {
   return (
     <div id="home-section">
       <div
@@ -33,7 +33,7 @@ const Home = () => {
         />
       </div>
       <HomeScroll />
-      <LinksBar />
+      <LinksBar links={links} />
     </div>
   );
 };

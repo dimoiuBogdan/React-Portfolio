@@ -114,10 +114,10 @@ const Portfolio = () => {
                       {project.title}
                     </h3>
                     <div>
-                      <a target="_blank" rel="noreferrer" href={project.github}>
+                      <a target="_blank" rel="noreferrer" href={project.url}>
                         <i className="text-2xl text-yellow-400 transition-all hover:scale-110 hover:text-yellow-500 transform fas fa-eye"></i>
                       </a>
-                      <a target="_blank" rel="noreferrer" href={project.url}>
+                      <a target="_blank" rel="noreferrer" href={project.github}>
                         <i className="text-2xl ml-3 text-yellow-400 transition-all hover:scale-110 hover:text-yellow-500 transform fab fa-github"></i>
                       </a>
                     </div>

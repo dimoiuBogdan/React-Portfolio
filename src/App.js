@@ -9,9 +9,31 @@ const About = React.lazy(() => import("./SECTIONS/About"));
 const Skills = React.lazy(() => import("./SECTIONS/Skills"));
 const Portfolio = React.lazy(() => import("./SECTIONS/Portfolio"));
 const Contact = React.lazy(() => import("./SECTIONS/Contact"));
-const Footer = React.lazy(() => import("./SECTIONS/Footer"));
 
 const App = () => {
+  const links = [
+    {
+      href: "https://github.com/dimoiuBogdan?tab=repositories",
+      iconClass: "fab fa-github",
+    },
+    {
+      href: "https://www.instagram.com/bogdan_dimoiu/",
+      iconClass: "fab fa-instagram",
+    },
+    {
+      href: "tel:+40727892022",
+      iconClass: "fas fa-phone",
+    },
+    {
+      href: "mailto:bogdybogdan34@gmail.com",
+      iconClass: "fas fa-envelope",
+    },
+    {
+      href: "https://www.linkedin.com/in/dimoiu-bogdan-650b431ba/",
+      iconClass: "fab fa-linkedin-in",
+    },
+  ];
+
   useEffect(() => {
     AOS.init({
       duration: 600,
@@ -30,13 +52,12 @@ const App = () => {
         }
       >
         <Header />
-        <Home />
+        <Home links={links} />
         <div className="container mx-auto">
-          <About />
+          <About links={links} />
           <Skills />
           <Portfolio />
-          <Contact />
-          <Footer />
+          <Contact links={links} />
         </div>
         <UpButton />
       </Suspense>

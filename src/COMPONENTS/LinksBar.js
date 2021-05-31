@@ -1,4 +1,4 @@
-const LinksBar = () => {
+const LinksBar = ({ inAbout }) => {
   const links = [
     {
       href: "https://github.com/dimoiuBogdan?tab=repositories",
@@ -23,7 +23,7 @@ const LinksBar = () => {
   ];
 
   return (
-    <div className="relative">
+    <div className="relative hidden xl:block">
       <div
         data-aos="fade-in"
         data-aos-delay="1000"

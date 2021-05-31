@@ -7,6 +7,10 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  @apply focus:outline-none focus:ring focus:ring-yellow-400;
+}
+
 /* hide scrollbar but allow scrolling */
 body {
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
@@ -75,4 +79,8 @@ body::-webkit-scrollbar {
 
 .skill-card {
   @apply shadow-xl sm:text-xl font-medium rounded-sm bg-black bg-opacity-20 md:px-5 px-2 md:py-3 py-1 flex items-center justify-between;
+}
+
+.contact-input {
+  @apply w-full py-1 px-2 rounded-sm shadow-md mb-6 font-medium text-lg;
 }
