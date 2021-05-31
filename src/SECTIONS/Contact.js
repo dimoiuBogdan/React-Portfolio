@@ -1,35 +1,98 @@
+import emailjs from "emailjs-com";
+import { useState } from "react";
+
 const Contact = ({ links }) => {
-  const sendEmail = () => {};
+  const [name, setName] = useState("");
+  const [mail, setMail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.init("user_cLsVCdogNE66UTtqSgCuG");
+    (name, mail, phone, subject, message)
+      ? emailjs.sendForm(
+          "service_b0becrj",
+          "template_ypcal7m",
+          e.target,
+          "user_cLsVCdogNE66UTtqSgCuG"
+        )
+      : alert("You must complete every field");
+  };
 
   return (
-    <div className="pb-12 px-2" id="contact-section">
+    <div className="pb-32 px-2" id="contact-section">
       <h2 className="title text-center mb-9">Let's Talk</h2>
       <div className="lg:w-2/3 w-full mx-auto flex flex-wrap lg:flex-nowrap">
-        <div className="sm:w-3/4 w-full">
+        <form onSubmit={sendEmail} className="sm:w-3/4 w-full text-gray-800">
           <div className="flex items-center justify-evenly flex-wrap">
             <div className="sm:w-1/2 w-full sm:pr-3">
-              <input className="contact-input" type="text" placeholder="Name" />
+              <input
+                className="contact-input"
+                type="text"
+                placeholder="Name*"
+                name="user_name"
+                value={name}
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
+              />
             </div>
             <div className="sm:w-1/2 w-full sm:pl-3">
               <input
                 className="contact-input"
                 type="text"
-                placeholder="Email"
+                placeholder="Email*"
+                name="user_mail"
+                value={mail}
+                onChange={(e) => {
+                  setMail(e.target.value);
+                }}
               />
             </div>
           </div>
-          <input className="contact-input" type="text" placeholder="Subject" />
+          <div className="flex items-center justify-evenly flex-wrap">
+            <div className="sm:w-1/2 w-full sm:pr-3">
+              <input
+                className="contact-input"
+                type="text"
+                placeholder="Phone Number*"
+                name="user_phone"
+                value={phone}
+                onChange={(e) => {
+                  setPhone(e.target.value);
+                }}
+              />
+            </div>
+            <div className="sm:w-1/2 w-full sm:pl-3">
+              <input
+                className="contact-input"
+                type="text"
+                placeholder="Subject*"
+                name="user_subject"
+                value={subject}
+                onChange={(e) => {
+                  setSubject(e.target.value);
+                }}
+              />
+            </div>
+          </div>
           <textarea
             className="contact-input h-48"
-            placeholder="Message"
+            placeholder="Message*"
+            name="message"
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
           ></textarea>
-          <button
-            onClick={sendEmail}
-            className="w-full bg-yellow-400 text-gray-800 font-semibold text-xl py-1 hover:text-yellow-400 hover:bg-transparent transition-all rounded-sm"
-          >
-            Send Message!
-          </button>
-        </div>
+          <input
+            type="submit"
+            value="Send Message!"
+            className="w-full bg-yellow-400 cursor-pointer text-gray-800 font-semibold text-xl py-1 hover:text-yellow-400 hover:bg-transparent transition-all rounded-sm"
+          ></input>
+        </form>
         <div className="lg:w-1/3 w-full text-center lg:text-left lg:mt-0 mt-5 pl-5 font-medium text-lg">
           <p className="mb-2">
             <a
