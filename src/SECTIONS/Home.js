@@ -2,6 +2,8 @@ import HomeScroll from "../COMPONENTS/HomeScroll";
 import LinksBar from "../COMPONENTS/LinksBar";
 import heroPNG from "../IMAGES/hero_png.png";
 
+import CV from "../IMAGES/CV.pdf";
+
 const Home = ({ links }) => {
   return (
     <div id="home-section">
@@ -18,7 +20,9 @@ const Home = ({ links }) => {
             Work Hard, Keep Learning, Deliver Quality
           </h4>
           <div>
-            <button className="button">Download CV</button>
+            <a href={CV} download className="button">
+              Download CV
+            </a>
             <button className="button">
               <a href="#skills-section">My Skills</a>
             </button>

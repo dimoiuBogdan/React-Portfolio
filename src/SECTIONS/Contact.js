@@ -7,18 +7,28 @@ const Contact = ({ links }) => {
   const [phone, setPhone] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [contactError, setContactError] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs.init("user_cLsVCdogNE66UTtqSgCuG");
     (name, mail, phone, subject, message)
-      ? emailjs.sendForm(
-          "service_b0becrj",
-          "template_ypcal7m",
-          e.target,
-          "user_cLsVCdogNE66UTtqSgCuG"
-        )
-      : alert("You must complete every field");
+      ? emailjs
+          .sendForm(
+            "service_b0becrj",
+            "template_ypcal7m",
+            e.target,
+            "user_cLsVCdogNE66UTtqSgCuG"
+          )
+          .then(() => {
+            setName("");
+            setMail("");
+            setPhone("");
+            setSubject("");
+            setMessage("");
+            setContactError("");
+          })
+      : setContactError("Complete Every Field Correctly");
   };
 
   return (
@@ -42,7 +52,7 @@ const Contact = ({ links }) => {
             <div className="sm:w-1/2 w-full sm:pl-3">
               <input
                 className="contact-input"
-                type="text"
+                type="email"
                 placeholder="Email*"
                 name="user_mail"
                 value={mail}
@@ -56,7 +66,7 @@ const Contact = ({ links }) => {
             <div className="sm:w-1/2 w-full sm:pr-3">
               <input
                 className="contact-input"
-                type="text"
+                type="tel"
                 placeholder="Phone Number*"
                 name="user_phone"
                 value={phone}
@@ -92,6 +102,9 @@ const Contact = ({ links }) => {
             value="Send Message!"
             className="w-full bg-yellow-400 cursor-pointer text-gray-800 font-semibold text-xl py-1 hover:text-yellow-400 hover:bg-transparent transition-all rounded-sm"
           ></input>
+          <p className="text-xl text-red-400 text-center my-3 font-medium">
+            {contactError}
+          </p>
         </form>
         <div className="lg:w-1/3 w-full text-center lg:text-left lg:mt-0 mt-5 pl-5 font-medium text-lg">
           <p className="mb-2">

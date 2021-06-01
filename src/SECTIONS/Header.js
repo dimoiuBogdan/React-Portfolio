@@ -51,7 +51,12 @@ const Navbar = () => {
       }}
     >
       <div className="container mx-auto items-center justify-between font-medium flex">
-        <img src="" alt="" />
+        <a
+          href="#home-section"
+          className="uppercase text-xl text-yellow-400 font-medium tracking-widest"
+        >
+          Bogdan
+        </a>
         <div>
           <div
             id="hamburger"
