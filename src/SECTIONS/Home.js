@@ -25,6 +25,7 @@ const Home = ({ links }) => {
           </div>
         </div>
         <img
+          load="lazy"
           className="md:w-1/2 sm:w-2/5 w-0"
           src={heroPNG}
           alt="hero-png"

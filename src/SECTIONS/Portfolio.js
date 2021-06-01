@@ -142,6 +142,7 @@ const Portfolio = () => {
                   animate={project.showCover ? "visible" : "hidden"}
                   initial={project.showCover ? "hidden" : "visible"}
                   src={project.img}
+                  load="lazy"
                   className="h-full w-full object-cover filter brightness-75"
                   alt="project-cover"
                 />
