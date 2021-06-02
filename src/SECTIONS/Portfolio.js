@@ -6,6 +6,8 @@ import simpleChatIMG from "../IMAGES/PORTFOLIO/simpleChatIMG.png";
 import myPortfolioIMG from "../IMAGES/PORTFOLIO/myPortfolioIMG.png";
 import catProjectIMG from "../IMAGES/PORTFOLIO/catProjectIMG.png";
 import transactionsTrackerIMG from "../IMAGES/PORTFOLIO/transactionsTrackerIMG.png";
+import typeRacerIMG from "../IMAGES/PORTFOLIO/typeRacerIMG.png";
+import gameDetailsIMG from "../IMAGES/PORTFOLIO/gameDetailsIMG.png";
 
 const Portfolio = () => {
   const [projects, setProjects] = useState([
@@ -62,6 +64,26 @@ const Portfolio = () => {
       github:
         "https://github.com/dimoiuBogdan/React-Tailwind-Budget-Calculator",
       url: "https://react-tailwind-budget-calculator.netlify.app/",
+      showCover: true,
+    },
+    {
+      title: "Typing Game",
+      description: "A type racer game",
+      builtWith: "Angular, Typescript, Tailwind",
+      features: "Words, Text",
+      img: typeRacerIMG,
+      github: "https://github.com/dimoiuBogdan/Angular-Typing-Game",
+      url: "https://type-racer-project.web.app/",
+      showCover: true,
+    },
+    {
+      title: "Games Details API",
+      description: "An app made with rawg.io games API.",
+      builtWith: "Angular",
+      features: "Add / Remove Transactions",
+      img: gameDetailsIMG,
+      github: "https://github.com/dimoiuBogdan/Angular-Game-Details-API",
+      url: "https://games-details.netlify.app/",
       showCover: true,
     },
   ]);
