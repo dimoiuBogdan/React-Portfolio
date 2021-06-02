@@ -123,9 +123,9 @@ const Contact = ({ links }) => {
             </a>
           </p>
           <p className="mb-2">
-            <a href="mailto:bogdybogdan34@gmail.com">
+            <a href="mailto:dimoiubogdan03@gmail.com">
               <i className="mr-3 text-yellow-400 fas fa-envelope"></i>
-              bogdybogdan34@gmail.com
+              dimoiubogdan03@gmail.com
             </a>
           </p>
         </div>

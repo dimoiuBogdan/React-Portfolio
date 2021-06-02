@@ -25,7 +25,7 @@ const App = () => {
       iconClass: "fas fa-phone",
     },
     {
-      href: "mailto:bogdybogdan34@gmail.com",
+      href: "mailto:dimoiubogdan03@gmail.com",
       iconClass: "fas fa-envelope",
     },
     {
