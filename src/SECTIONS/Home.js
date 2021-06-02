@@ -16,9 +16,9 @@ const Home = ({ links }) => {
           <h2 className="sm:text-4xl lg:text-5xl text-4xl my-5 text-yellow-400">
             JUNIOR FRONT-END DEV.
           </h2>
-          <h4 className="sm:text-xl lg:text-2xl text-lg">
+          <h2 className="sm:text-xl lg:text-2xl text-lg">
             Work Hard, Keep Learning, Deliver Quality
-          </h4>
+          </h2>
           <div>
             <a href={CV} download className="button">
               Download CV
